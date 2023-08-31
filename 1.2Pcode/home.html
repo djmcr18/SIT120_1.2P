@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design Example</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(38, 38, 38);
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgb(68, 68, 68);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .sidebar {
+            flex: 1;
+            padding: 20px;
+            background-color: rgba(157, 156, 156, 0.815);
+            border-radius: 8px;
+            margin: 10px;
+        }
+
+        .content {
+            flex: 2;
+            padding: 20px;
+            background-color: rgba(157, 156, 156, 0.815);
+            border-radius: 8px;
+            margin: 10px;
+            position: relative;
+        }
+
+        @media screen and (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .sidebar, .content {
+                flex: 1;
+                margin: 10px 0;
+            }
+        }
+
+        h1, h2 {
+            color: rgb(226, 226, 26);
+            font-weight: 600;
+        }
+
+        h2 {
+            margin-top: 30px;
+            border-bottom: 2px solid rgb(226, 226, 26);
+            padding-bottom: 5px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(157, 156, 156, 0.815);
+            border-radius: 8px;
+        }
+
+        code {
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            background-color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: rgb(226, 226, 26);
+        }
+
+        .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(68, 68, 68);
+            color: rgb(226, 226, 26);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease-in-out;
+            text-align: center; /* Center the text horizontally */
+            white-space: normal; /* Allow the text to wrap */
+        }
+
+        .button-link:hover {
+            background-color: rgb(136, 15, 15);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>A Website Using Responsive Web Design</h1>
+        </div>
+        <div class="content">
+            <p>Diego Miranda Ciudad Real <br>
+                <br>
+                Deakin University<br>
+                s223341726
+
+            <img src="html5-logo-31816.png" alt="html and css" class="responsive-image" style="max-width: 180px; height: auto; position: absolute; top: 50%; right: 4%; transform: translateY(-50%);">
+        </div>
+        </p>
+        
+        
+        <div class="main-content">
+            <div class="sidebar">
+                <h2>Javascript Concepts!</h2>
+                <p>Press this button below to access a webpage that showcases
+                    the implementation of various different JavaScript
+                    concepts:
+                </p>
+                <br>
+                <a href="javascriptconcepts.html" class="button-link">Go to JavaScript Concepts</a>
+            </div>
+            <div class="content">
+                <h2>What is Responsive Web Design and Why is it Important?</h2>
+                <p>Responsive web design refers to the method of designing and developing websites in a way that ensures optimal viewing and accessibility across most devices and screen sizes, including computers, tablets, and smartphones. The main objective is to create a seamless user experience by automatically adjusting the layout, content, and functionality of a website based on not only the screen size, but also the orientation of the device being used.<br>
+                    <br>
+                    Responsive web design is important because of the wide range of devices people use to access the internet. A website that is not responsive for a certain device will appear distorted and usually unreadable, which is obviously frustrating for users/consumers and will drive them away. By embracing responsive design, websites can adapt their design elements, such as images, text, and navigation menus, to provide a consistent and user-friendly experience regardless of the device.<br>
+                    <br>
+                    The responsive web design approach is also more efficient to create and maintain websites. Instead of creating separate versions of a site for different devices, developers can focus on a single codebase, reducing development time and costs and simplifying updates.<br>
+                    <br>
+                    Another reason for the importance of this web design method is the fact that Google's search algorithms favour mobile friendly sites, and with mobile browsing being highly prevalent in our current era, responsive web design has become the industry standard.<br>
+                    <br>
+                    Ultimately, responsive web design is essential for delivering a consistent online experience to users across all devices and it boosts user satisfaction, retention, and the overall success of a website.
+                    </p>
+            </div>
+            <div class="content">
+                <h2>How to Implement Responsive Web Design With HTML and CSS</h2>
+                <p>Responsive web design is achieved through various HTML and CSS techniques.<br>
+                    <br>
+                    Media queries in CSS can be used to set breakpoints where the layout and styling should change. These queries apply different CSS rules based on the screen width.<br>
+                    <br>
+                    Fluid grids play a crucial role, as they use relative units like percentages instead of fixed pixels for layout components. This allows elements to resize proportionally. Images can be made responsive by setting a maximum width of 100% to stop them from overflowing their containers.<br>
+                    <br>
+                    CSS Flexbox and Grid layout systems are powerful tools for creating flexible and responsive designs. Flexbox is ideal for one-dimensional layouts, while Grid handles both rows and columns. These layout techniques enable better control over content placement and alignment across various devices.<br>
+                    <br>
+                    Font sizing can be relative by using 'em' or 'rem' units to maintain readability on different screens and the option of hiding, rearranging, or resizing non-essential elements for smaller screens can be used to optimise the user experience.<br>
+                    <br>
+                    Also, testing across multiple devices and screen sizes is essential to ensure the design works as intended on all devices.<br>
+                    
+                    </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
